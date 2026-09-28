@@ -1,0 +1,4173 @@
+[
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071774,
+        "order": 3,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "BLOGSPOT",
+            "LINKEDIN",
+            "LINKEDIN_PREMIUM",
+            "SENDSAFELY",
+            "SNAPCHAT",
+            "FACEBOOK",
+            "TIKTOK",
+            "CHATGPT_AI",
+            "INSTAGRAM",
+            "TWITTER",
+            "WEBEX"
+        ],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1781795314,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_CloudApps",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1071776,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "urlCategories": [
+                    {
+                        "id": 111,
+                        "name": "WEB_CONFERENCING",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 14,
+                        "name": "_PRD_Confidential_Proprietary"
+                    },
+                    {
+                        "id": 46,
+                        "name": "CVS Health HICN"
+                    },
+                    {
+                        "id": 61,
+                        "name": "PCI",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "SNAPCHAT",
+                    "FACEBOOK",
+                    "TIKTOK",
+                    "CHATGPT_AI",
+                    "INSTAGRAM",
+                    "TWITTER",
+                    "SENDSAFELY",
+                    "BLOGSPOT",
+                    "LINKEDIN",
+                    "LINKEDIN_PREMIUM",
+                    "WEBEX"
+                ],
+                "minSize": 0,
+                "action": "BLOCK",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_DLP_ClousApps_2_1",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": true,
+                "parentRule": 1071774,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 5,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1071778,
+                "order": 2,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "urlCategories": [
+                    {
+                        "id": 111,
+                        "name": "WEB_CONFERENCING",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 13,
+                        "name": "_PRD_Restricted_CreditCard"
+                    },
+                    {
+                        "id": 44,
+                        "name": "CVS Health Bank Account"
+                    },
+                    {
+                        "id": 45,
+                        "name": "CVS Health SSN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "WEBEX",
+                    "BLOGSPOT",
+                    "LINKEDIN",
+                    "LINKEDIN_PREMIUM",
+                    "SNAPCHAT",
+                    "FACEBOOK",
+                    "TIKTOK",
+                    "CHATGPT_AI",
+                    "INSTAGRAM",
+                    "TWITTER",
+                    "SENDSAFELY"
+                ],
+                "minSize": 0,
+                "action": "BLOCK",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_DLP_ClousApps__2_2",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": true,
+                "parentRule": 1071774,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 5,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071779,
+        "order": 10,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 13,
+                "name": "_PRD_Restricted_CreditCard"
+            },
+            {
+                "id": 21,
+                "name": "_PRD_Creds-Secrets"
+            },
+            {
+                "id": 45,
+                "name": "CVS Health SSN"
+            },
+            {
+                "id": 46,
+                "name": "CVS Health HICN"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "SLACK"
+        ],
+        "minSize": 0,
+        "action": "BLOCK",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_Slack_Block",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": true,
+        "severity": "RULE_SEVERITY_HIGH",
+        "sourceIpGroups": [],
+        "eunTemplateId": 5,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071780,
+        "order": 11,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "urlCategories": [
+            {
+                "id": 122,
+                "name": "AI_ML_APPS",
+                "isNameL10nTag": true
+            },
+            {
+                "id": 131,
+                "name": "DPS_DenyListProd_AIchatbots"
+            },
+            {
+                "id": 137,
+                "name": "CVSH_DPS_Unauthorized_URLs_for_Uploads"
+            },
+            {
+                "id": 142,
+                "name": "S-CVSH-Marketing_Social-Networking"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_UA_Restricted_Data",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1071782,
+                "order": 10,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "dlpEngines": [
+                    {
+                        "id": 44,
+                        "name": "CVS Health Bank Account"
+                    },
+                    {
+                        "id": 45,
+                        "name": "CVS Health SSN"
+                    },
+                    {
+                        "id": 46,
+                        "name": "CVS Health HICN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "BLOCK",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_DLP-BankAcc_HICN_SSN-Block",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": true,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 5,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1071786,
+                "order": 11,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "dlpEngines": [
+                    {
+                        "id": 13,
+                        "name": "_PRD_Restricted_CreditCard"
+                    },
+                    {
+                        "id": 14,
+                        "name": "_PRD_Confidential_Proprietary"
+                    },
+                    {
+                        "id": 15,
+                        "name": "_PRD_Confidential_Medical"
+                    },
+                    {
+                        "id": 16,
+                        "name": "_PRD_Confidential_MBI"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "BLOCK",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_DLP_UA_Restrc_4_2",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": true,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 5,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1071795,
+                "order": 12,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "BLOCK",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_DLP_UA_Restrc_4_3",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": true,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 5,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1074072,
+                "order": 3,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "groups": [
+                    {
+                        "id": 75196712,
+                        "name": "HCDO"
+                    },
+                    {
+                        "id": 75294698,
+                        "name": "HCDS"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 14,
+                        "name": "_PRD_Confidential_Proprietary"
+                    },
+                    {
+                        "id": 15,
+                        "name": "_PRD_Confidential_Medical"
+                    },
+                    {
+                        "id": 44,
+                        "name": "CVS Health Bank Account"
+                    },
+                    {
+                        "id": 46,
+                        "name": "CVS Health HICN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "GDRIVE",
+                    "GOOGLE_WEBMAIL"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_Gmail-GoogleDrive",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1155068,
+                "order": 5,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "groups": [
+                    {
+                        "id": 85664283,
+                        "name": "CLDGRP_Allow_Gdrive"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 45,
+                        "name": "CVS Health SSN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "GDRIVE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Ex_GoogleDrive-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1300124,
+                "order": 4,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Created for James Beyers Team to allow use copyrighted code in GitHub copilot.26Feb2025\nINC26703213",
+                "urlCategories": [
+                    {
+                        "id": 219,
+                        "name": "DPS-CVSH-DLP-Allow"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 14,
+                        "name": "_PRD_Confidential_Proprietary"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Ex_ConfProp_Category-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1308633,
+                "order": 9,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Adding per SCTASK0016284 (AS 3/6)",
+                "users": [
+                    {
+                        "id": 56554907,
+                        "name": "Lochiatto, Dana K(dlochiatto@aetna.com)"
+                    },
+                    {
+                        "id": 56976801,
+                        "name": "Moon, Steven W(swmoon@cvshealth.com)"
+                    },
+                    {
+                        "id": 118423168,
+                        "name": "Palamakula, Akshay(akshay.palamakula@aetna.com)"
+                    },
+                    {
+                        "id": 56613201,
+                        "name": "Tummala, Kavita(kavita.tummala@cvshealth.com)",
+                        "deleted": true
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 16,
+                        "name": "_PRD_Confidential_MBI"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "GDRIVE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_4_1c",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1468787,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Rule to ensure that Teams/Outlook uploads are not blocked - JW 10/10/2025",
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "MSTEAM"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_M365",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1666579,
+                "order": 2,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Approved via AI governance #3891 - SCTASK1791225 - JW 2/19/20267",
+                "groups": [
+                    {
+                        "id": 160724366,
+                        "name": "CLDGRP_SpecialtyCX"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 14,
+                        "name": "_PRD_Confidential_Proprietary"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "LUMEN5"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_AI_Conf_Lumen5",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1768234,
+                "order": 6,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "SCTASK2577097 - JET 5/21/26",
+                "locations": [
+                    {
+                        "id": -3,
+                        "name": "LOC_DEFAULT",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 15,
+                        "name": "_PRD_Confidential_Medical"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "CLAUDE_AI"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_MedicalTerms_AI-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1776218,
+                "order": 7,
+                "protocols": [
+                    "HTTPS_RULE"
+                ],
+                "rank": 0,
+                "description": "REQ1457902 - JET - 5/28/26",
+                "locations": [
+                    {
+                        "id": -3,
+                        "name": "LOC_DEFAULT",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "urlCategories": [
+                    {
+                        "id": 122,
+                        "name": "AI_ML_APPS",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 14,
+                        "name": "_PRD_Confidential_Proprietary"
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_OLM",
+                    "FTCATEGORY_TNEF",
+                    "FTCATEGORY_MS_RTF",
+                    "FTCATEGORY_MS_PUB",
+                    "FTCATEGORY_MS_POWERPOINT",
+                    "FTCATEGORY_MS_MDB",
+                    "FTCATEGORY_PDF_DOCUMENT",
+                    "FTCATEGORY_MS_MSG",
+                    "FTCATEGORY_MS_WORD",
+                    "FTCATEGORY_MS_EXCEL",
+                    "FTCATEGORY_VSDX"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 315,
+                        "name": "FTCATEGORY_OLM",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 322,
+                        "name": "FTCATEGORY_TNEF",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 33,
+                        "name": "FTCATEGORY_MS_RTF",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 316,
+                        "name": "FTCATEGORY_MS_PUB",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 4,
+                        "name": "FTCATEGORY_MS_POWERPOINT",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 36,
+                        "name": "FTCATEGORY_MS_MDB",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 7,
+                        "name": "FTCATEGORY_PDF_DOCUMENT",
+                        "parent": "OTHER_DOCUMENTS"
+                    },
+                    {
+                        "id": 61,
+                        "name": "FTCATEGORY_MS_MSG",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 5,
+                        "name": "FTCATEGORY_MS_WORD",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 6,
+                        "name": "FTCATEGORY_MS_EXCEL",
+                        "parent": "OFFICE_DOCUMENTS"
+                    },
+                    {
+                        "id": 136,
+                        "name": "FTCATEGORY_VSDX",
+                        "parent": "OFFICE_DOCUMENTS"
+                    }
+                ],
+                "cloudApplications": [
+                    "CLAUDE_AI"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_ConfProp_AI-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1818478,
+                "order": 8,
+                "protocols": [
+                    "WEBSOCKETSSL_RULE",
+                    "WEBSOCKET_RULE",
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Using for testing of AI DLP testing POCs. - JET - 7/1/26",
+                "users": [
+                    {
+                        "id": 56596111,
+                        "name": "Farhan, Syed I(ismailullahfarhan.syed@cvshealth.com)"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_TST_DIME_AI_Testing-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071780,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071787,
+        "order": 12,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "urlCategories": [
+            {
+                "id": 122,
+                "name": "AI_ML_APPS",
+                "isNameL10nTag": true
+            },
+            {
+                "id": 131,
+                "name": "DPS_DenyListProd_AIchatbots"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_AIchatbot_trnsfr_MON",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_INFO",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071789,
+        "order": 14,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 26,
+                "name": "_PRD_PCI"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "BLOCK",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_PCI",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": true,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1468790,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "testing dlp exception due to ssl inspecting onedrive/sharepoint traffic",
+                "dlpEngines": [
+                    {
+                        "id": 26,
+                        "name": "_PRD_PCI"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "MSTEAM"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795606,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_PCI_EX-M365-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071789,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1511935,
+                "order": 2,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "CHG0653963 - JW 9/30/2025\nCHG0796384 - JW 3/17/2026",
+                "dlpEngines": [
+                    {
+                        "id": 26,
+                        "name": "_PRD_PCI"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "SHAREPOINTONLINE",
+                    "ONEDRIVE",
+                    "WINDOWS_LIVE_HOTMAIL"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_SharePoint_ODB_PCI_Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "cloudAppInstances": [
+                    {
+                        "id": 2768529,
+                        "name": "CVSH-SharePoint",
+                        "type": "SHAREPOINTONLINE"
+                    },
+                    {
+                        "id": 2823524,
+                        "name": "CVSH-OneDrive",
+                        "type": "ONEDRIVE"
+                    },
+                    {
+                        "id": 2858288,
+                        "name": "CVS-OWA",
+                        "type": "WINDOWS_LIVE_HOTMAIL"
+                    }
+                ],
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071789,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1818505,
+                "order": 3,
+                "protocols": [
+                    "WEBSOCKETSSL_RULE",
+                    "WEBSOCKET_RULE",
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "For Syed AI testing - JET  - 7/1/26",
+                "locations": [
+                    {
+                        "id": -3,
+                        "name": "LOC_DEFAULT",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "users": [
+                    {
+                        "id": 56596111,
+                        "name": "Farhan, Syed I(ismailullahfarhan.syed@cvshealth.com)"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_AI_Testing-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1071789,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 5,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071790,
+        "order": 15,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 45,
+                "name": "CVS Health SSN"
+            },
+            {
+                "id": 46,
+                "name": "CVS Health HICN"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_AnyURL_Rstrc_Prsnl_MON",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071791,
+        "order": 16,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 2,
+                "name": "_PRD_Creds_AWS Credentials"
+            },
+            {
+                "id": 3,
+                "name": "_PRD_Creds_Azure Access Key"
+            },
+            {
+                "id": 4,
+                "name": "_PRD_Creds_Password"
+            },
+            {
+                "id": 21,
+                "name": "_PRD_Creds-Secrets"
+            }
+        ],
+        "fileTypes": [
+            "FTCATEGORY_NATVIS",
+            "FTCATEGORY_PDF_DOCUMENT",
+            "FTCATEGORY_SHELL_SCRAP",
+            "FTCATEGORY_MS_EXCEL",
+            "FTCATEGORY_FOR",
+            "FTCATEGORY_RSP",
+            "FTCATEGORY_TXT",
+            "FTCATEGORY_JAVA_APPLET",
+            "FTCATEGORY_MATLAB_FILES",
+            "FTCATEGORY_TIFF",
+            "FTCATEGORY_MAKE_FILES",
+            "FTCATEGORY_DSP",
+            "FTCATEGORY_RPY",
+            "FTCATEGORY_SCT",
+            "FTCATEGORY_LOG_FILES",
+            "FTCATEGORY_GO_FILES",
+            "FTCATEGORY_SQL",
+            "FTCATEGORY_INF",
+            "FTCATEGORY_CSX",
+            "FTCATEGORY_TLI",
+            "FTCATEGORY_X1B",
+            "FTCATEGORY_COBOL",
+            "FTCATEGORY_INCLUDE_FILES",
+            "FTCATEGORY_F_FILES",
+            "FTCATEGORY_BASIC_SOURCE_CODE",
+            "FTCATEGORY_WINDOWS_SCRIPT_FILES",
+            "FTCATEGORY_MS_RTF",
+            "FTCATEGORY_BORLAND_CPP_FILES",
+            "FTCATEGORY_BCP",
+            "FTCATEGORY_IFC",
+            "FTCATEGORY_PERL_FILES",
+            "FTCATEGORY_RES_FILES",
+            "FTCATEGORY_SCZIP",
+            "FTCATEGORY_MS_POWERPOINT",
+            "FTCATEGORY_PYTHON",
+            "FTCATEGORY_MS_MSG",
+            "FTCATEGORY_JPEG",
+            "FTCATEGORY_FORM_DATA_POST",
+            "FTCATEGORY_POWERSHELL",
+            "FTCATEGORY_POD",
+            "FTCATEGORY_PNG",
+            "FTCATEGORY_EML_FILES",
+            "FTCATEGORY_TLH",
+            "FTCATEGORY_VISUAL_BASIC_FILES",
+            "FTCATEGORY_MSC",
+            "FTCATEGORY_TABLEAU_FILES",
+            "FTCATEGORY_XAML",
+            "FTCATEGORY_RUBY_FILES",
+            "FTCATEGORY_APPLE_DOCUMENTS",
+            "FTCATEGORY_BASH_SCRIPTS",
+            "FTCATEGORY_SCALA",
+            "FTCATEGORY_DELPHI",
+            "FTCATEGORY_MS_CPP_FILES",
+            "FTCATEGORY_BITMAP",
+            "FTCATEGORY_MS_WORD",
+            "FTCATEGORY_JAVA_FILES",
+            "FTCATEGORY_CSV",
+            "FTCATEGORY_ASM",
+            "FTCATEGORY_SAS",
+            "FTCATEGORY_VISUAL_BASIC_SCRIPT",
+            "FTCATEGORY_DAT",
+            "FTCATEGORY_C_FILES",
+            "FTCATEGORY_AU3",
+            "FTCATEGORY_YAML_FILES",
+            "FTCATEGORY_JAVASCRIPT",
+            "FTCATEGORY_VSDX",
+            "FTCATEGORY_SC"
+        ],
+        "fileTypeCategories": [
+            {
+                "id": 168,
+                "name": "FTCATEGORY_NATVIS",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 7,
+                "name": "FTCATEGORY_PDF_DOCUMENT",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 119,
+                "name": "FTCATEGORY_SHELL_SCRAP",
+                "parent": "EXECUTABLES"
+            },
+            {
+                "id": 6,
+                "name": "FTCATEGORY_MS_EXCEL",
+                "parent": "OFFICE_DOCUMENTS"
+            },
+            {
+                "id": 188,
+                "name": "FTCATEGORY_FOR",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 175,
+                "name": "FTCATEGORY_RSP",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 50,
+                "name": "FTCATEGORY_TXT",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 12,
+                "name": "FTCATEGORY_JAVA_APPLET",
+                "parent": "ACTIVE_WEB_CONTENTS"
+            },
+            {
+                "id": 80,
+                "name": "FTCATEGORY_MATLAB_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 57,
+                "name": "FTCATEGORY_TIFF",
+                "parent": "IMAGES"
+            },
+            {
+                "id": 83,
+                "name": "FTCATEGORY_MAKE_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 166,
+                "name": "FTCATEGORY_DSP",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 174,
+                "name": "FTCATEGORY_RPY",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 156,
+                "name": "FTCATEGORY_SCT",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 236,
+                "name": "FTCATEGORY_LOG_FILES",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 76,
+                "name": "FTCATEGORY_GO_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 94,
+                "name": "FTCATEGORY_SQL",
+                "parent": "DATABASE"
+            },
+            {
+                "id": 154,
+                "name": "FTCATEGORY_INF",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 163,
+                "name": "FTCATEGORY_CSX",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 182,
+                "name": "FTCATEGORY_TLI",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 185,
+                "name": "FTCATEGORY_X1B",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 162,
+                "name": "FTCATEGORY_COBOL",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 81,
+                "name": "FTCATEGORY_INCLUDE_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 167,
+                "name": "FTCATEGORY_F_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 118,
+                "name": "FTCATEGORY_BASIC_SOURCE_CODE",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 102,
+                "name": "FTCATEGORY_WINDOWS_SCRIPT_FILES",
+                "parent": "MICROSOFT"
+            },
+            {
+                "id": 33,
+                "name": "FTCATEGORY_MS_RTF",
+                "parent": "OFFICE_DOCUMENTS"
+            },
+            {
+                "id": 160,
+                "name": "FTCATEGORY_BORLAND_CPP_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 187,
+                "name": "FTCATEGORY_BCP",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 186,
+                "name": "FTCATEGORY_IFC",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 79,
+                "name": "FTCATEGORY_PERL_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 173,
+                "name": "FTCATEGORY_RES_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 56,
+                "name": "FTCATEGORY_SCZIP",
+                "parent": "ARCHIVES"
+            },
+            {
+                "id": 4,
+                "name": "FTCATEGORY_MS_POWERPOINT",
+                "parent": "OFFICE_DOCUMENTS"
+            },
+            {
+                "id": 72,
+                "name": "FTCATEGORY_PYTHON",
+                "parent": "EXECUTABLES"
+            },
+            {
+                "id": 61,
+                "name": "FTCATEGORY_MS_MSG",
+                "parent": "OFFICE_DOCUMENTS"
+            },
+            {
+                "id": 44,
+                "name": "FTCATEGORY_JPEG",
+                "parent": "IMAGES"
+            },
+            {
+                "id": 52,
+                "name": "FTCATEGORY_FORM_DATA_POST",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 86,
+                "name": "FTCATEGORY_POWERSHELL",
+                "parent": "EXECUTABLES"
+            },
+            {
+                "id": 171,
+                "name": "FTCATEGORY_POD",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 45,
+                "name": "FTCATEGORY_PNG",
+                "parent": "IMAGES"
+            },
+            {
+                "id": 238,
+                "name": "FTCATEGORY_EML_FILES",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 181,
+                "name": "FTCATEGORY_TLH",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 85,
+                "name": "FTCATEGORY_VISUAL_BASIC_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 134,
+                "name": "FTCATEGORY_MSC",
+                "parent": "EXECUTABLES"
+            },
+            {
+                "id": 231,
+                "name": "FTCATEGORY_TABLEAU_FILES",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 108,
+                "name": "FTCATEGORY_XAML",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 78,
+                "name": "FTCATEGORY_RUBY_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 230,
+                "name": "FTCATEGORY_APPLE_DOCUMENTS",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 116,
+                "name": "FTCATEGORY_BASH_SCRIPTS",
+                "parent": "EXECUTABLES"
+            },
+            {
+                "id": 178,
+                "name": "FTCATEGORY_SCALA",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 164,
+                "name": "FTCATEGORY_DELPHI",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 158,
+                "name": "FTCATEGORY_MS_CPP_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 30,
+                "name": "FTCATEGORY_BITMAP",
+                "parent": "IMAGES"
+            },
+            {
+                "id": 5,
+                "name": "FTCATEGORY_MS_WORD",
+                "parent": "OFFICE_DOCUMENTS"
+            },
+            {
+                "id": 82,
+                "name": "FTCATEGORY_JAVA_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 74,
+                "name": "FTCATEGORY_CSV",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 159,
+                "name": "FTCATEGORY_ASM",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 176,
+                "name": "FTCATEGORY_SAS",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 95,
+                "name": "FTCATEGORY_VISUAL_BASIC_SCRIPT",
+                "parent": "EXECUTABLES"
+            },
+            {
+                "id": 241,
+                "name": "FTCATEGORY_DAT",
+                "parent": "OTHER_DOCUMENTS"
+            },
+            {
+                "id": 107,
+                "name": "FTCATEGORY_C_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 239,
+                "name": "FTCATEGORY_AU3",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 84,
+                "name": "FTCATEGORY_YAML_FILES",
+                "parent": "SOURCE_CODE"
+            },
+            {
+                "id": 10,
+                "name": "FTCATEGORY_JAVASCRIPT",
+                "parent": "ACTIVE_WEB_CONTENTS"
+            },
+            {
+                "id": 136,
+                "name": "FTCATEGORY_VSDX",
+                "parent": "OFFICE_DOCUMENTS"
+            },
+            {
+                "id": 177,
+                "name": "FTCATEGORY_SC",
+                "parent": "SOURCE_CODE"
+            }
+        ],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_AnyURL_Rstrc_Creds_MON",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_INFO",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071792,
+        "order": 17,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 13,
+                "name": "_PRD_Restricted_CreditCard"
+            },
+            {
+                "id": 44,
+                "name": "CVS Health Bank Account"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_AnyURL_Rstrc_Fncl_MON",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_INFO",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1071794,
+        "order": 18,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 14,
+                "name": "_PRD_Confidential_Proprietary"
+            },
+            {
+                "id": 15,
+                "name": "_PRD_Confidential_Medical"
+            },
+            {
+                "id": 16,
+                "name": "_PRD_Confidential_MBI"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_AnyURL_Conf_Prptry_MON",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_INFO",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1081451,
+        "order": 19,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 13,
+                "name": "_PRD_Restricted_CreditCard"
+            },
+            {
+                "id": 45,
+                "name": "CVS Health SSN"
+            },
+            {
+                "id": 46,
+                "name": "CVS Health HICN"
+            },
+            {
+                "id": 61,
+                "name": "PCI",
+                "isNameL10nTag": true
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "WEBEX"
+        ],
+        "minSize": 0,
+        "action": "BLOCK",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_UA_Rstrc_Webex",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": true,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1081452,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [
+                    "WEBEX"
+                ],
+                "minSize": 0,
+                "action": "BLOCK",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Webex_11_1",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1081451,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 5,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1106476,
+        "order": 6,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "Secrets detection and block",
+        "dlpEngines": [
+            {
+                "id": 21,
+                "name": "_PRD_Creds-Secrets"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "BOXNET",
+            "GITHUB",
+            "GITLAB"
+        ],
+        "minSize": 0,
+        "action": "BLOCK",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_Secrets-Block",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": true,
+        "severity": "RULE_SEVERITY_INFO",
+        "sourceIpGroups": [],
+        "eunTemplateId": 5,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1117653,
+        "order": 20,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "dlpEngines": [
+            {
+                "id": 59,
+                "name": "EXTERNAL",
+                "isNameL10nTag": true
+            }
+        ],
+        "fileTypes": [
+            "FTCATEGORY_ENCRYPT"
+        ],
+        "fileTypeCategories": [
+            {
+                "id": 65,
+                "name": "FTCATEGORY_ENCRYPT",
+                "parent": "OTHER"
+            }
+        ],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "BLOCK",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": true,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_AnyURL_PwdPrtctd",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": true,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1117656,
+                "order": 3,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Modified name to meaningful. - JET - 5/29/26",
+                "groups": [
+                    {
+                        "id": 98734544,
+                        "name": "CLDGRP_CTI_Allow"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [
+                    "FLASHPOINT"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_Flashpoint_CTI_PWD_ENCRYPT-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1117658,
+                "order": 4,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Updated to meaningful name. - JET - 5/29/26",
+                "groups": [
+                    {
+                        "id": 98734544,
+                        "name": "CLDGRP_CTI_Allow"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [
+                    "BOXNET"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_BOX_AETNA_YCC_PWD_ENCRYPT-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "cloudAppInstances": [
+                    {
+                        "id": 189438,
+                        "name": "YCC Box Prod",
+                        "type": "BOXNET"
+                    },
+                    {
+                        "id": 198576,
+                        "name": "Aetna Box Sandbox",
+                        "type": "BOXNET"
+                    }
+                ],
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1117663,
+                "order": 6,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "groups": [
+                    {
+                        "id": 98734544,
+                        "name": "CLDGRP_CTI_Allow"
+                    },
+                    {
+                        "id": 111876482,
+                        "name": "CLGRP-DLP-ALLOW-INTH"
+                    },
+                    {
+                        "id": 111876481,
+                        "name": "CLGRP-DLP-ALLOW-SOC"
+                    },
+                    {
+                        "id": 111876484,
+                        "name": "CLGRP-DLP-ALLOW-CSIRT"
+                    }
+                ],
+                "urlCategories": [
+                    {
+                        "id": 167,
+                        "name": "CVSH-CTI-PWD-EXLUDE"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_14_3",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1218262,
+                "order": 7,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "For use with exclude Legal Team Password protected file rule - 11/7/2024 (ATS) \nBased on TASK4677853",
+                "groups": [
+                    {
+                        "id": 85539226,
+                        "name": "CLDGRP_AAD_EXODLP_PSSRTL_SenderEncryptPyld"
+                    }
+                ],
+                "urlCategories": [
+                    {
+                        "id": 175,
+                        "name": "CVSH-Legal-PWD-Exclude"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_14_4",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1225095,
+                "order": 8,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Added Exception due to Zscaler blocking input in a site due to external site encrypting the input. Sites are listed in the URL Category assigned to this rule. 11/15 (ATS)\nAdded .mhdo.maine.gov to site list - JW 8/19/2025",
+                "urlCategories": [
+                    {
+                        "id": 212,
+                        "name": "CVSH-PWD_Encrypt-Allow"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_14_5",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1486260,
+                "order": 2,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Rule created to allow encrypted files during monitoring phase - JW 8/12/2025",
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [
+                    "MSTEAM"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_M365_PWD_Exception",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1511933,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "CHG0653963 - JW 9/30/2025\nCHG0796384 - JW 3/17/2026",
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [
+                    "SHAREPOINTONLINE",
+                    "ONEDRIVE",
+                    "WINDOWS_LIVE_HOTMAIL"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_CVSH_SP_ODB_Encrypt_Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "cloudAppInstances": [
+                    {
+                        "id": 2823524,
+                        "name": "CVSH-OneDrive",
+                        "type": "ONEDRIVE"
+                    },
+                    {
+                        "id": 2768529,
+                        "name": "CVSH-SharePoint",
+                        "type": "SHAREPOINTONLINE"
+                    },
+                    {
+                        "id": 2858288,
+                        "name": "CVS-OWA",
+                        "type": "WINDOWS_LIVE_HOTMAIL"
+                    }
+                ],
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1636813,
+                "order": 9,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "for Third Party Risk Acceptance uploads to ServiceNow EXC-11570 - JW 3/3/2026",
+                "groups": [
+                    {
+                        "id": 167057884,
+                        "name": "CLDGRP_TPSRiskAssessmentTeam"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [
+                    "SERVICENOW"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_PWD_TPS_SNOW_Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1766833,
+                "order": 10,
+                "protocols": [
+                    "WEBSOCKETSSL_RULE",
+                    "WEBSOCKET_RULE",
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "JET - 5/20/2026\nAP - 6/26/2026 SCTASK2735701",
+                "users": [
+                    {
+                        "id": 56597681,
+                        "name": "Livingston, Joseph A(jalivingston@cvshealth.com)"
+                    },
+                    {
+                        "id": 56588128,
+                        "name": "Salla, HarshiniReddy(harshini.reddy@cvshealth.com)"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_CKPT",
+                    "FTCATEGORY_SCZIP",
+                    "FTCATEGORY_CPIO",
+                    "FTCATEGORY_TAR",
+                    "FTCATEGORY_ZIP",
+                    "FTCATEGORY_RPM",
+                    "FTCATEGORY_XZ",
+                    "FTCATEGORY_LZH",
+                    "FTCATEGORY_ZIPX",
+                    "FTCATEGORY_BZIP2",
+                    "FTCATEGORY_STUFFIT",
+                    "FTCATEGORY_CAB",
+                    "FTCATEGORY_ISO",
+                    "FTCATEGORY_RAR",
+                    "FTCATEGORY_GZIP",
+                    "FTCATEGORY_FCL",
+                    "FTCATEGORY_PGP",
+                    "FTCATEGORY_ENCRYPT",
+                    "FTCATEGORY_P7Z"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 325,
+                        "name": "FTCATEGORY_CKPT",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 56,
+                        "name": "FTCATEGORY_SCZIP",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 317,
+                        "name": "FTCATEGORY_CPIO",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 15,
+                        "name": "FTCATEGORY_TAR",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 13,
+                        "name": "FTCATEGORY_ZIP",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 334,
+                        "name": "FTCATEGORY_RPM",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 301,
+                        "name": "FTCATEGORY_XZ",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 318,
+                        "name": "FTCATEGORY_LZH",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 309,
+                        "name": "FTCATEGORY_ZIPX",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 16,
+                        "name": "FTCATEGORY_BZIP2",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 19,
+                        "name": "FTCATEGORY_STUFFIT",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 35,
+                        "name": "FTCATEGORY_CAB",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 34,
+                        "name": "FTCATEGORY_ISO",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 17,
+                        "name": "FTCATEGORY_RAR",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 14,
+                        "name": "FTCATEGORY_GZIP",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 305,
+                        "name": "FTCATEGORY_FCL",
+                        "parent": "ARCHIVES"
+                    },
+                    {
+                        "id": 302,
+                        "name": "FTCATEGORY_PGP",
+                        "parent": "OTHER_DOCUMENTS"
+                    },
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    },
+                    {
+                        "id": 53,
+                        "name": "FTCATEGORY_P7Z",
+                        "parent": "ARCHIVES"
+                    }
+                ],
+                "cloudApplications": [
+                    "GOOGLE_CLOUD_PLATFORM"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_CVSH_GCP_PwdEnc-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1777986,
+                "order": 5,
+                "protocols": [
+                    "HTTPS_RULE"
+                ],
+                "rank": 0,
+                "description": "JET - 5-29-26",
+                "locations": [
+                    {
+                        "id": -3,
+                        "name": "LOC_DEFAULT",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "departments": [
+                    {
+                        "id": 85259771,
+                        "name": "CB COMM BUSINESS FEDERAL EHBP"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_ENCRYPT"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 65,
+                        "name": "FTCATEGORY_ENCRYPT",
+                        "parent": "OTHER"
+                    }
+                ],
+                "cloudApplications": [
+                    "SHAREPOINTONLINE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "receiver": {
+                    "id": 1882,
+                    "name": "AWS Incident Receiver",
+                    "type": "ZIR"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_M365_FED_OPM_PWD_ENCRYPT-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "cloudAppInstances": [
+                    {
+                        "id": 4916180,
+                        "name": "US Office of Personnel Mangement",
+                        "type": "SHAREPOINTONLINE"
+                    }
+                ],
+                "zccNotificationsEnabled": false,
+                "parentRule": 1117653,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 5,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1131192,
+        "order": 21,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "Need SSL Inspection turned on for CoPilot",
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "COPILOT_AI",
+            "MICROSOFT_COPILOT"
+        ],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_CoPilot",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1433744,
+        "order": 13,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "Testing browser GET requests for DLP rules\n\nJET - 5/20/2026",
+        "urlCategories": [
+            {
+                "id": 122,
+                "name": "AI_ML_APPS",
+                "isNameL10nTag": true
+            }
+        ],
+        "dlpEngines": [
+            {
+                "id": 13,
+                "name": "_PRD_Restricted_CreditCard"
+            },
+            {
+                "id": 44,
+                "name": "CVS Health Bank Account"
+            },
+            {
+                "id": 45,
+                "name": "CVS Health SSN"
+            },
+            {
+                "id": 46,
+                "name": "CVS Health HICN"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "CLAUDE_AI"
+        ],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": true,
+        "name": "TST_CVSH_DLP_AI_Detection-Block",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1460168,
+        "order": 1,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "DLP Rule to allow traffic to M365 services in audit only mode - JW 8/12/2025\nLog and policy review - removing JW from rule - JD 3/30/2026",
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "MSTEAM"
+        ],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "DISABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1780060255,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "TEST-CVSH-DLP-AllowM365",
+        "excludedUsers": [
+            {
+                "id": 56592702,
+                "name": "Hilton, James(hiltonj@cvshealth.com)"
+            }
+        ],
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1508766,
+        "order": 22,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "CHG0653963 - JW 9/30/2025\nRITM1183367 - JW 10/15/2025\nCHG0796384 - JW 3/17/2026",
+        "dlpEngines": [
+            {
+                "id": 44,
+                "name": "CVS Health Bank Account"
+            },
+            {
+                "id": 45,
+                "name": "CVS Health SSN"
+            },
+            {
+                "id": 46,
+                "name": "CVS Health HICN"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [
+            "SHAREPOINTONLINE",
+            "ONEDRIVE_PERSONAL",
+            "ONEDRIVE",
+            "HOTMAIL_PERSONAL",
+            "WINDOWS_LIVE_HOTMAIL"
+        ],
+        "minSize": 0,
+        "action": "BLOCK",
+        "state": "ENABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "receiver": {
+            "id": 1882,
+            "name": "AWS Incident Receiver",
+            "type": "ZIR"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "PRD_DLP_M365_Block",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": true,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1508767,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "CHG0653963 - JW 9/30/2025\nRITM1183367 - JW 10/15/2025\nCHG0796384 - JW 3/17/2026",
+                "dlpEngines": [
+                    {
+                        "id": 44,
+                        "name": "CVS Health Bank Account"
+                    },
+                    {
+                        "id": 45,
+                        "name": "CVS Health SSN"
+                    },
+                    {
+                        "id": 46,
+                        "name": "CVS Health HICN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "SHAREPOINTONLINE",
+                    "ONEDRIVE",
+                    "WINDOWS_LIVE_HOTMAIL"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_CVS_M365_Rstrc_Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "cloudAppInstances": [
+                    {
+                        "id": 2768529,
+                        "name": "CVSH-SharePoint",
+                        "type": "SHAREPOINTONLINE"
+                    },
+                    {
+                        "id": 2823524,
+                        "name": "CVSH-OneDrive",
+                        "type": "ONEDRIVE"
+                    },
+                    {
+                        "id": 2858288,
+                        "name": "CVS-OWA",
+                        "type": "WINDOWS_LIVE_HOTMAIL"
+                    }
+                ],
+                "zccNotificationsEnabled": false,
+                "parentRule": 1508766,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1515783,
+                "order": 2,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "EXC-11473 Approved - JW 10/6/2025",
+                "dlpEngines": [
+                    {
+                        "id": 45,
+                        "name": "CVS Health SSN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "SHAREPOINTONLINE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_DLP_SP_State_Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "cloudAppInstances": [
+                    {
+                        "id": 2881592,
+                        "name": "External State SharePoint Allow",
+                        "type": "SHAREPOINTONLINE"
+                    }
+                ],
+                "zccNotificationsEnabled": false,
+                "parentRule": 1508766,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1748672,
+                "order": 3,
+                "protocols": [
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Exception Required for Income Tax Department - JET 5/4/2026",
+                "locations": [
+                    {
+                        "id": -3,
+                        "name": "LOC_DEFAULT",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "departments": [
+                    {
+                        "id": 56604641,
+                        "name": "IncomeTAX"
+                    },
+                    {
+                        "id": 56456394,
+                        "name": "TAX"
+                    },
+                    {
+                        "id": 85236420,
+                        "name": "Tax"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 59,
+                        "name": "EXTERNAL",
+                        "isNameL10nTag": true
+                    }
+                ],
+                "fileTypes": [
+                    "FTCATEGORY_PDF_DOCUMENT",
+                    "FTCATEGORY_MS_EXCEL"
+                ],
+                "fileTypeCategories": [
+                    {
+                        "id": 7,
+                        "name": "FTCATEGORY_PDF_DOCUMENT",
+                        "parent": "OTHER_DOCUMENTS"
+                    },
+                    {
+                        "id": 6,
+                        "name": "FTCATEGORY_MS_EXCEL",
+                        "parent": "OFFICE_DOCUMENTS"
+                    }
+                ],
+                "cloudApplications": [
+                    "SHAREPOINTONLINE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": true,
+                "inspectHttpGetEnabled": false,
+                "name": "PRD_CVS_M365_Deloitte_Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "cloudAppInstances": [
+                    {
+                        "id": 4766055,
+                        "name": "External Deloitte SharePoint Allow",
+                        "type": "SHAREPOINTONLINE"
+                    }
+                ],
+                "zccNotificationsEnabled": false,
+                "parentRule": 1508766,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 5,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1786091,
+        "order": 4,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "JET - Initial Creation - 6/5/2026",
+        "users": [
+            {
+                "id": 139862432,
+                "name": "Twohey, James(james.twohey@cvshealth.com)"
+            }
+        ],
+        "dlpEngines": [
+            {
+                "id": 17,
+                "name": "_PRD_Restricted_HICN"
+            },
+            {
+                "id": 46,
+                "name": "CVS Health HICN"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "DISABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1781795314,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "TST_DLP_HICN-Block",
+        "labels": [
+            {
+                "id": 1841152,
+                "name": "Data Protection - Pre-Production"
+            }
+        ],
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1786106,
+                "order": 1,
+                "protocols": [
+                    "WEBSOCKETSSL_RULE",
+                    "WEBSOCKET_RULE",
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "JET - Initial Creation - 6/5/2026",
+                "dlpEngines": [
+                    {
+                        "id": 17,
+                        "name": "_PRD_Restricted_HICN"
+                    },
+                    {
+                        "id": 46,
+                        "name": "CVS Health HICN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "COPILOT",
+                    "MICROSOFT_COPILOT_STUDIO",
+                    "GITHUB_COPILOT",
+                    "MICROSOFT_COPILOT"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_HICN_EX_CoPilot-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786091,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1802548,
+                "order": 2,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "JET - Initial Creation - 6/18/2026",
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "MSTEAM"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_HICN_EX-M365-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786091,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1802561,
+                "order": 3,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Migrated - JET - 6/18/26",
+                "groups": [
+                    {
+                        "id": 75196712,
+                        "name": "HCDO"
+                    },
+                    {
+                        "id": 75294698,
+                        "name": "HCDS"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 17,
+                        "name": "_PRD_Restricted_HICN"
+                    },
+                    {
+                        "id": 46,
+                        "name": "CVS Health HICN"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "GOOGLE_WEBMAIL",
+                    "GDRIVE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_HICN_EX-Gmail_GDrive_HCD-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786091,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1786092,
+        "order": 9,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "JET - Initial Creation - 6/5/2026",
+        "users": [
+            {
+                "id": 139862432,
+                "name": "Twohey, James(james.twohey@cvshealth.com)"
+            }
+        ],
+        "dlpEngines": [
+            {
+                "id": 32,
+                "name": "_PRD_Restricted_PHI"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "DISABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "TST_DLP_PHI-Block",
+        "labels": [
+            {
+                "id": 1841152,
+                "name": "Data Protection - Pre-Production"
+            }
+        ],
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1802554,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Created - JET - 6/18/2026",
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "MSTEAM"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_PHI_EX-M365-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786092,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1786094,
+        "order": 8,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "JET - Initial Creation - 6/5/2026",
+        "users": [
+            {
+                "id": 139862432,
+                "name": "Twohey, James(james.twohey@cvshealth.com)"
+            }
+        ],
+        "dlpEngines": [
+            {
+                "id": 14,
+                "name": "_PRD_Confidential_Proprietary"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "DISABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "TST_DLP_Conf_Proprietary-Block",
+        "labels": [
+            {
+                "id": 1841152,
+                "name": "Data Protection - Pre-Production"
+            }
+        ],
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1786110,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "groups": [
+                    {
+                        "id": 160724366,
+                        "name": "CLDGRP_SpecialtyCX"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 14,
+                        "name": "_PRD_Confidential_Proprietary"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "LUMEN5"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_ConfProp_EX-Lumen5-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786094,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1786113,
+                "order": 2,
+                "protocols": [
+                    "WEBSOCKETSSL_RULE",
+                    "WEBSOCKET_RULE",
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_ConfProp_EX-Gmail_GDrive-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786094,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1828534,
+                "order": 3,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "urlCategories": [
+                    {
+                        "id": 168,
+                        "name": "Claude_URLs"
+                    },
+                    {
+                        "id": 221,
+                        "name": "Claude_Code"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "CLAUDE_AI"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_Exception_7_1",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786094,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1786096,
+        "order": 7,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "JET - Initial Creation - 6/5/2026",
+        "users": [
+            {
+                "id": 139862432,
+                "name": "Twohey, James(james.twohey@cvshealth.com)"
+            }
+        ],
+        "dlpEngines": [
+            {
+                "id": 15,
+                "name": "_PRD_Confidential_Medical"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "DISABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "TST_DLP_Conf_Medical-Block",
+        "labels": [
+            {
+                "id": 1841152,
+                "name": "Data Protection - Pre-Production"
+            }
+        ],
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1802542,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Created - JET -  6/18/26",
+                "dlpEngines": [
+                    {
+                        "id": 15,
+                        "name": "_PRD_Confidential_Medical"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "FACEBOOK",
+                    "INSTAGRAM",
+                    "LINKEDIN",
+                    "BLOGSPOT",
+                    "SENDSAFELY",
+                    "SNAPCHAT",
+                    "TWITTER",
+                    "WEBEX",
+                    "TIKTOK",
+                    "CHATGPT_AI",
+                    "LINKEDIN_PREMIUM"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_ConfMed_EX-CloudApps-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786096,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1802580,
+                "order": 2,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Migrated - 6/18/26 - JET",
+                "groups": [
+                    {
+                        "id": 75294698,
+                        "name": "HCDS"
+                    },
+                    {
+                        "id": 75196712,
+                        "name": "HCDO"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 15,
+                        "name": "_PRD_Confidential_Medical"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "GOOGLE_WEBMAIL",
+                    "GDRIVE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_ConfMed_EX-Gmail_GDrive_HCD-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786096,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            },
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1802663,
+                "order": 3,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Created - JET - 6/18/26",
+                "urlCategories": [
+                    {
+                        "id": 168,
+                        "name": "Claude_URLs"
+                    },
+                    {
+                        "id": 221,
+                        "name": "Claude_Code"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 15,
+                        "name": "_PRD_Confidential_Medical"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "CLAUDE_AI",
+                    "ANTHROPIC_AI"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1783606592,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_ConfMed_EX-Claude-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1786096,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1802669,
+        "order": 2,
+        "protocols": [
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "Created 6/18/26 - JET",
+        "dlpEngines": [
+            {
+                "id": 44,
+                "name": "CVS Health Bank Account"
+            }
+        ],
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "BLOCK",
+        "state": "DISABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1781795336,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "TST_DLP_BankAccount-Block",
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": true,
+        "severity": "RULE_SEVERITY_HIGH",
+        "subRules": [
+            {
+                "accessControl": "READ_WRITE",
+                "id": 1802683,
+                "order": 1,
+                "protocols": [
+                    "FTP_RULE",
+                    "HTTPS_RULE",
+                    "HTTP_RULE"
+                ],
+                "rank": 0,
+                "description": "Created - 6/18/26",
+                "groups": [
+                    {
+                        "id": 75196712,
+                        "name": "HCDO"
+                    },
+                    {
+                        "id": 75294698,
+                        "name": "HCDS"
+                    }
+                ],
+                "dlpEngines": [
+                    {
+                        "id": 44,
+                        "name": "CVS Health Bank Account"
+                    }
+                ],
+                "fileTypes": [],
+                "fileTypeCategories": [],
+                "cloudApplications": [
+                    "GOOGLE_WEBMAIL",
+                    "GDRIVE"
+                ],
+                "minSize": 0,
+                "action": "ALLOW",
+                "state": "ENABLED",
+                "matchOnly": false,
+                "lastModifiedTime": 1781795492,
+                "lastModifiedBy": {
+                    "id": 139862432,
+                    "name": "james.twohey@cvshealth.com"
+                },
+                "withoutContentInspection": false,
+                "inspectHttpGetEnabled": false,
+                "name": "DLP_BankAcc_EX_Gmail_GDrive_HCD-Allow",
+                "dlpDownloadScanEnabled": false,
+                "timeoutFailCloseEnabled": false,
+                "deeplyNestedContentEnabled": false,
+                "zccNotificationsEnabled": false,
+                "parentRule": 1802669,
+                "severity": "RULE_SEVERITY_HIGH",
+                "sourceIpGroups": [],
+                "eunTemplateId": 0,
+                "ucTemplateId": 0
+            }
+        ],
+        "sourceIpGroups": [],
+        "eunTemplateId": 5,
+        "ucTemplateId": 0
+    },
+    {
+        "accessControl": "READ_WRITE",
+        "id": 1828550,
+        "order": 5,
+        "protocols": [
+            "WEBSOCKETSSL_RULE",
+            "WEBSOCKET_RULE",
+            "FTP_RULE",
+            "HTTPS_RULE",
+            "HTTP_RULE"
+        ],
+        "rank": 0,
+        "description": "Created 7/9/2026 - JET",
+        "fileTypes": [],
+        "fileTypeCategories": [],
+        "cloudApplications": [],
+        "minSize": 0,
+        "action": "ALLOW",
+        "state": "DISABLED",
+        "matchOnly": false,
+        "lastModifiedTime": 1783607257,
+        "lastModifiedBy": {
+            "id": 139862432,
+            "name": "james.twohey@cvshealth.com"
+        },
+        "withoutContentInspection": false,
+        "inspectHttpGetEnabled": false,
+        "name": "TST_CVSH_Microsoft_Label-Block",
+        "labels": [
+            {
+                "id": 1841152,
+                "name": "Data Protection - Pre-Production"
+            }
+        ],
+        "dlpDownloadScanEnabled": false,
+        "timeoutFailCloseEnabled": false,
+        "deeplyNestedContentEnabled": false,
+        "zccNotificationsEnabled": false,
+        "severity": "RULE_SEVERITY_HIGH",
+        "sourceIpGroups": [],
+        "eunTemplateId": 0,
+        "ucTemplateId": 0
+    }
+]

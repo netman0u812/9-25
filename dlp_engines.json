@@ -1,0 +1,447 @@
+[
+    {
+        "id": 1,
+        "name": "SSN (Masked with Keywords)",
+        "engineExpression": "((D1.S > 3) AND (D2.S > 0))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "_PRD_Creds_AWS Credentials",
+        "engineExpression": "((D3.S > 1))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "_PRD_Creds_Azure Access Key",
+        "engineExpression": "((D4.S > 1))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "_PRD_Creds_Password",
+        "engineExpression": "((D6.S > 1) AND (D5.S > 0))",
+        "customDlpEngine": true,
+        "description": "Created 2023-07-06 pk",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "_PRD_Restricted_BankAccount",
+        "engineExpression": "((D8.S > 0) AND (D9.S > 4))",
+        "customDlpEngine": true,
+        "description": "bank account keyword + pattern",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "_PRD_Restricted_BankAccount_w_Routing",
+        "engineExpression": "((D8.S > 0) AND (D9.S > 4) AND (D38.S > 1))",
+        "customDlpEngine": true,
+        "description": "bank acct+Routing+pattern\nDO NOT CHANGE WITHOUT APPROVAL FROM DATA PROTECTION",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "_PRD_Restricted_CreditCard",
+        "engineExpression": "((D12.S > 1) AND (NOT((D26.S > 0))))",
+        "customDlpEngine": true,
+        "description": "Detect 2 or more PCI\\CreditCard transfers.\nModified 2023-06-25 (PK)",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "_PRD_Confidential_Proprietary",
+        "engineExpression": "((D10.S > 0))",
+        "customDlpEngine": true,
+        "description": "Identify CVS Health Confidential and/or Proprietary information based on phrases in document header or footer.\nCreated: 2023-06-18 PK",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "_PRD_Confidential_Medical",
+        "engineExpression": "((D60.S > 0) AND (D131.S > 0))",
+        "customDlpEngine": true,
+        "description": "Detect Medical Information. Created 2023-06-25 (PK)",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "_PRD_Confidential_MBI",
+        "engineExpression": "((D13.S > 0) AND (D19.S > 4))",
+        "customDlpEngine": true,
+        "description": "Detect Medicare Beneficiary Identifier (MBI) card number.  Created 2023-07-01 PK\nDO NOT CHANGE WITHOUT APPROVAL FROM DATA PROTECTION",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "_PRD_Restricted_HICN",
+        "engineExpression": "((D15.S > 0) AND (D14.S > 1))",
+        "customDlpEngine": true,
+        "description": "Detect HICN. Created 2023-07-05 PK",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "_TST_Confidential_IP_Addresses",
+        "engineExpression": "(SUM(D20.S) > 5)",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "_PRD_Restricted_SSN",
+        "engineExpression": "((D22.S > 5) AND (D2.S > 0) AND (NOT((D27.S > 0))))",
+        "customDlpEngine": true,
+        "description": "Detect SSN transfers, using Zscaler modified SSN Clone engine. \nCreated 2023-05-17\nModified 2023-06-25 to detect hits with 5 or more SSNs.",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "_PRD_Creds-Secrets",
+        "engineExpression": "((D172.S > 1))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 26,
+        "name": "_PRD_PCI",
+        "engineExpression": "((D12.S > 5) AND (NOT((D26.S > 0))))",
+        "customDlpEngine": true,
+        "description": "Detect PCI violations",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Test-Divestiture-Key Words",
+        "engineExpression": "((D85.S > 0))",
+        "customDlpEngine": true,
+        "description": "testing key word match for Lawrence Crockett",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "_PRD_Restricted_SSN - SPO-ODB",
+        "engineExpression": "((D11.S > 100) AND (NOT((D27.S > 0))))",
+        "customDlpEngine": true,
+        "description": "Detect SSN transfers, using Zscaler modified SSN Clone engine. This is for use with CASB SharePoint and OneDrive Only\nCreated 2025-Feb-25 RPS",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "_PRD_Restricted_SSN - SPO-ODB - TEST",
+        "engineExpression": "((D1.S > 100) AND (NOT((D27.S > 0))))",
+        "customDlpEngine": true,
+        "description": "Detect SSN transfers, using Zscaler modified SSN Clone engine. This is for use with CASB SharePoint and OneDrive Only\nCreated 2025-Feb-25 RPS",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "_PRD_Restricted_PHI",
+        "engineExpression": "((D65.S > 0) OR (D67.S > 0) OR (D66.S > 0) OR (D31.S > 0))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 33,
+        "name": "PRD_Secure_Mail",
+        "engineExpression": "((D64.S > 0))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "PRD_Secure_Exception",
+        "engineExpression": "((D68.S > 0))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "PRD_File_EXT_Encrypt",
+        "engineExpression": "((D19.S > 0))",
+        "customDlpEngine": true,
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 42,
+        "name": "_PRD_Confidential_Medical - Spec-1",
+        "engineExpression": "((D60.S > 0) AND (D131.S > 0) AND (D75.S > 0))",
+        "customDlpEngine": true,
+        "description": "Detect Medical Information. Created 2025 Oct 3 RPS for RISK",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 43,
+        "name": "_PRD_Confidential_MBI - Spec",
+        "engineExpression": "((D13.S > 0) AND (D19.S > 0))",
+        "customDlpEngine": true,
+        "description": "Detect Medicare Beneficiary Identifier (MBI) card number.  Created 2025 Oct 3 RPS for RISK\nDO NOT CHANGE WITHOUT APPROVAL FROM DATA PROTECTION",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 44,
+        "name": "CVS Health Bank Account",
+        "engineExpression": "((D76.S > 4) AND (NOT(((D78.S > 0) OR (D79.S > 0)))))",
+        "customDlpEngine": true,
+        "description": "RITM1115420 - JW 10/6/2025",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 45,
+        "name": "CVS Health SSN",
+        "engineExpression": "((D25.S > 5) AND (NOT(((D27.S > 0) OR (D80.S > 0)))))",
+        "customDlpEngine": true,
+        "description": "RITM1115420 - JW 10/6/2025\nRITM1152669 - JW 10/10/2025",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 46,
+        "name": "CVS Health HICN",
+        "engineExpression": "((D77.S > 1))",
+        "customDlpEngine": true,
+        "description": "Testing new HICN regex - JW 10/9/2025\nRITM1183367 - JW 10/15/2025",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 47,
+        "name": "TEST CVS Health Bank Account",
+        "engineExpression": "((D82.S > 1) AND (NOT((D84.S > 0))))",
+        "customDlpEngine": true,
+        "description": "Testing new bank account engine for better coverage - JW 12/24/2025",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 61,
+        "predefinedEngineName": "PCI",
+        "engineExpression": "((D12.S > 5) AND (NOT((D26.S > 0))))",
+        "customDlpEngine": false,
+        "description": "Detect PCI violations",
+        "engineChannels": [
+            "ENDPOINT_DLP",
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DLP_EMAIL",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 64,
+        "predefinedEngineName": "CYBER_BULLY_ENG",
+        "engineExpression": "(D119.S > 0)",
+        "customDlpEngine": false,
+        "description": "Detect self-harm & cyberbullying violations",
+        "engineChannels": [
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 63,
+        "predefinedEngineName": "HIPAA",
+        "engineExpression": "(D60.S > 0 AND D62.S > 5)",
+        "customDlpEngine": false,
+        "description": "Detect HIPAA violations",
+        "engineChannels": [
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 62,
+        "predefinedEngineName": "GLBA",
+        "engineExpression": "(D61.S > 0 AND D62.S > 5)",
+        "customDlpEngine": false,
+        "description": "Detect GLBA violations",
+        "engineChannels": [
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DSPM"
+        ]
+    },
+    {
+        "id": 60,
+        "predefinedEngineName": "OFFENSIVE_LANGUAGE",
+        "engineExpression": "(D48.S > 0)",
+        "customDlpEngine": false,
+        "description": "Detect Offensive language",
+        "engineChannels": [
+            "INLINE_WEB",
+            "SAAS_SECURITY",
+            "DSPM"
+        ]
+    }
+]
